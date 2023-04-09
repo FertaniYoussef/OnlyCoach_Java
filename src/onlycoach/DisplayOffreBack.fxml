@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onlycoach.DisplayOffreBackController">
+   <children>
+      <ListView fx:id="offreListView" layoutX="48.0" layoutY="66.0" prefHeight="145.0" prefWidth="489.0" />
+      <Label fx:id="titleLbl" layoutX="78.0" layoutY="228.0" prefHeight="17.0" prefWidth="72.0" />
+      <Label fx:id="descriptionLbl" layoutX="78.0" layoutY="278.0" prefHeight="17.0" prefWidth="72.0" />
+      <Label fx:id="priceLbl" layoutX="78.0" layoutY="328.0" prefHeight="17.0" prefWidth="72.0" />
+      <Label layoutX="61.0" layoutY="20.0" text="Dashboard Offres ">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="BDelete" layoutX="405.0" layoutY="266.0" mnemonicParsing="false" onAction="#DeleteOffre" text="Delete" />
+      <Button fx:id="Bupdate" layoutX="405.0" layoutY="324.0" mnemonicParsing="false" onAction="#UpdateOffre" text="Update" />
+   </children>
+</AnchorPane>
