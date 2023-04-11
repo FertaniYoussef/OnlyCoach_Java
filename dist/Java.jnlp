@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Java.jnlp">
+  <information>
+    <title>Java</title>
+    <vendor>user</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Java.jar" size="37552" download="eager" />
+    <jar href="lib\commons-lang3-3.12.0.jar" size="587402" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.17-bin.jar" size="787920" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="gui.MainEvent"  name="Java" />
+  <update check="always"/>
+</jnlp>

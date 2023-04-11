@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.BackEventController">
+   <children>
+      <VBox alignment="CENTER" layoutX="-5.0" layoutY="-9.0" prefHeight="615.0" prefWidth="204.0" spacing="25.0" style="-fx-background-color: #009688;">
+         <children>
+            <Button fx:id="btMenuEvent" mnemonicParsing="false" onAction="#fnMenuEvent" prefHeight="57.0" prefWidth="141.0" style="-fx-background-color: #F27338;" text="Evenement" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btMenuCateg" layoutX="42.0" layoutY="289.0" mnemonicParsing="false" onAction="#fnMenuCateg" prefHeight="57.0" prefWidth="141.0" style="-fx-background-color: #F27338;" text="Categorie" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="42.0" layoutY="330.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="141.0" style="-fx-background-color: #F27338;" text="Retour" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <StackPane layoutX="199.0" layoutY="-12.0" prefHeight="618.0" prefWidth="600.0">
+         <children>
+            <Pane fx:id="pnEvent" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Button fx:id="btAjoutEvent" layoutX="110.0" layoutY="489.0" mnemonicParsing="false" onAction="#fnAjoutEvent" prefHeight="53.0" prefWidth="121.0" style="-fx-background-color: #F27338;" text="Ajouter" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tvEvent" layoutX="56.0" layoutY="125.0" onMouseClicked="#fnSelectedEvent" prefHeight="337.0" prefWidth="228.0">
+                    <columns>
+                      <TableColumn fx:id="colNomEvent" prefWidth="75.0" text="Nom" />
+                      <TableColumn fx:id="colCategEvent" prefWidth="75.0" text="Categorie" />
+                        <TableColumn fx:id="colLieuEvent" prefWidth="75.0" text="lieu" />
+                    </columns>
+                  </TableView>
+                  <VBox fx:id="vboxDetailEvent" layoutX="300.0" layoutY="125.0" prefHeight="431.0" prefWidth="281.0">
+                     <children>
+                        <ImageView fx:id="ImageEvent" fitHeight="150.0" fitWidth="283.0" pickOnBounds="true" preserveRatio="true" />
+                        <HBox prefHeight="228.0" prefWidth="281.0">
+                           <children>
+                              <VBox prefHeight="205.0" prefWidth="137.0">
+                                 <children>
+                                    <Label prefHeight="44.0" prefWidth="137.0" text="Date :" />
+                                    <Label layoutX="10.0" layoutY="10.0" prefHeight="44.0" prefWidth="137.0" text="Description :" />
+                                    <Label layoutX="10.0" layoutY="54.0" prefHeight="44.0" prefWidth="137.0" text="Prix :" />
+                                    <Label layoutX="10.0" layoutY="98.0" prefHeight="44.0" prefWidth="137.0" text="Place disponible:" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="205.0" prefWidth="137.0">
+                                 <children>
+                                    <Label fx:id="lbDateEvent" prefHeight="43.0" prefWidth="173.0" />
+                                    <Label fx:id="lbDescriptionEvent" layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="173.0" />
+                                    <Label fx:id="lbPrixEvent" layoutX="10.0" layoutY="53.0" prefHeight="43.0" prefWidth="173.0" />
+                                    <Label fx:id="lbPlaceDispoEvent" layoutX="10.0" layoutY="96.0" prefHeight="43.0" prefWidth="173.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="btnModifierEvent" mnemonicParsing="false" onAction="#fnModifierEvent" prefHeight="53.0" prefWidth="121.0" style="-fx-background-color: #F27338;" text="Modifier" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btSupprimerEvent" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#fnSupprimerEvent" prefHeight="53.0" prefWidth="121.0" style="-fx-background-color: #F27338;" text="Suprrimer" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label fx:id="lbIdEvent" layoutX="256.0" layoutY="65.0" visible="false" />
+               </children>
+            </Pane>
+            <Pane fx:id="pnCateg" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <TableView fx:id="tvCateg" layoutX="107.0" layoutY="151.0" onMouseClicked="#fnSelectedCateg" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="colCateg" prefWidth="199.0" text="Categorie" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="btDeleteCateg" layoutX="296.0" layoutY="502.0" mnemonicParsing="false" onAction="#fnDeleteCateg" prefHeight="53.0" prefWidth="121.0" style="-fx-background-color: #F27338;" text="Supprimer" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btAjoutCATEG" layoutX="106.0" layoutY="505.0" mnemonicParsing="false" onAction="#fnAjoutCateg" prefHeight="53.0" prefWidth="121.0" style="-fx-background-color: #F27338;" text="Ajouter" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="tfCateg" layoutX="212.0" layoutY="428.0" prefHeight="37.0" prefWidth="189.0" />
+                  <Label layoutX="110.0" layoutY="427.0" prefHeight="40.0" prefWidth="68.0" text="Categorie :" />
+                  <Label fx:id="lbidCateg" layoutX="422.0" layoutY="116.0" visible="false" />
+               </children>
+            </Pane>
+            <Pane fx:id="pnFormEvent" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <HBox layoutX="81.0" layoutY="89.0" prefHeight="444.0" prefWidth="450.0">
+                     <children>
+                        <VBox prefHeight="369.0" prefWidth="223.0">
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="223.0" text="Nom" />
+                              <Label layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="223.0" text="Description" />
+                              <Label layoutX="10.0" layoutY="60.0" prefHeight="50.0" prefWidth="223.0" text="lieu" />
+                              <Label layoutX="10.0" layoutY="110.0" prefHeight="50.0" prefWidth="223.0" text="Date" />
+                              <Label layoutX="10.0" layoutY="160.0" prefHeight="50.0" prefWidth="223.0" text="Heure" />
+                              <Label layoutX="10.0" layoutY="210.0" prefHeight="50.0" prefWidth="223.0" text="Categorie" />
+                              <Label layoutX="10.0" layoutY="260.0" prefHeight="50.0" prefWidth="223.0" text="Place disponible" />
+                              <Label layoutX="10.0" layoutY="310.0" prefHeight="50.0" prefWidth="223.0" text="Prix" />
+                              <Label layoutX="10.0" layoutY="360.0" prefHeight="50.0" prefWidth="223.0" text="Image" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="369.0" prefWidth="231.0" spacing="20.0">
+                           <children>
+                              <TextField fx:id="tfNomEvent" prefHeight="33.0" prefWidth="229.0" />
+                              <TextField fx:id="tfDescriptionEvent" layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="229.0" />
+                              <TextField fx:id="tfLieuEvent" layoutX="10.0" layoutY="43.0" prefHeight="33.0" prefWidth="229.0" />
+                              <DatePicker fx:id="tfDateEvent" prefHeight="25.0" prefWidth="231.0" />
+                              <TextField fx:id="tfDateHeure" layoutX="10.0" layoutY="76.0" prefHeight="33.0" prefWidth="229.0" />
+                              <ComboBox fx:id="tfCategorieEvent" prefHeight="33.0" prefWidth="229.0" />
+                              <TextField fx:id="tfPlaceEvent" layoutX="10.0" layoutY="134.0" prefHeight="33.0" prefWidth="229.0" />
+                              <TextField fx:id="tfPrixEvent" layoutX="10.0" layoutY="200.0" prefHeight="33.0" prefWidth="229.0" />
+                              <Button fx:id="tfImageEvent" mnemonicParsing="false" onAction="#fnImage" prefHeight="25.0" prefWidth="231.0" text="Choisir une Image" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnConfirmerEvent" layoutX="240.0" layoutY="556.0" mnemonicParsing="false" onAction="#fnConfirmerEvent" prefHeight="53.0" prefWidth="121.0" style="-fx-background-color: #F27338;" text="Confirmer" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="lbTitleAjouterEvent" layoutX="82.0" layoutY="44.0" prefHeight="35.0" prefWidth="298.0" text="Ajouter un Evenement">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbtitleModifierEvent" layoutX="83.0" layoutY="45.0" prefHeight="35.0" prefWidth="298.0" text="Modifier un Evenement">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbpathImage" layoutX="462.0" layoutY="37.0" visible="false" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
