@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="305.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.onlycoach.AddCategorieProdController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="772.0">
+         <children>
+            <AnchorPane prefHeight="321.0" prefWidth="772.0" style="-fx-background-color: #F7F8FD;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="224.0" layoutX="152.0" layoutY="57.0" stroke="#3a4374" strokeType="INSIDE" strokeWidth="0.2" width="420.0" />
+                  <Text fx:id="formTitle" fill="#3a4374" layoutX="180.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter une catégorie" wrappingWidth="240.00433349609375">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#3a4374" layoutX="181.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom de catégorie">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="titre" layoutX="181.0" layoutY="154.0" prefHeight="26.0" prefWidth="366.0" />
+                  <Button fx:id="cancelButton" layoutX="373.0" layoutY="218.0" mnemonicParsing="false" onAction="#cancel" style="-fx-background-color: #F7F8FD;"  text="Annuler" />
+                  <Button fx:id="addButton" layoutX="450.0" layoutY="218.0" mnemonicParsing="false" onAction="#addCategorie" style="-fx-background-color: #009866; -fx-text-fill: white;"  text="Ajouter Categorie" />
+                  <Button fx:id="backToListButton" layoutX="84.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackToList" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: #F7F8FD;" text="Retour" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
