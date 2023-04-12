@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="772.0">
+         <children>
+            <AnchorPane prefHeight="731.0" prefWidth="772.0" style="-fx-background-color: #F7F8FD;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="588.0" layoutX="152.0" layoutY="57.0" stroke="#3a4374" strokeType="INSIDE" strokeWidth="0.2" width="420.0" />
+                  <Text fill="#3a4374" layoutX="181.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Catégorie" wrappingWidth="129.33673095703125">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="formTitle" fill="#3a4374" layoutX="180.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un produit" wrappingWidth="240.00433349609375">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#3a4374" layoutX="181.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom du produit">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="titre" layoutX="181.0" layoutY="154.0" prefHeight="26.0" prefWidth="366.0" />
+                  <Text fill="#3a4374" layoutX="178.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="156.5367431640625">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="cancelButton" layoutX="392.0" layoutY="601.0" mnemonicParsing="false" onAction="#cancel" style="-fx-background-color: #F7F8FD;" stylesheets="src/resources/CSS/style.css" text="Annuler" />
+                  <Button fx:id="addButton" layoutX="457.0" layoutY="601.0" mnemonicParsing="false" onAction="#addProduct" style="-fx-background-color: #009866; -fx-text-fill: white;" stylesheets="src/resources/CSS/style.css" text="Ajouter produit" />
+                  <TextArea fx:id="desc" layoutX="174.0" layoutY="294.0" prefHeight="92.0" prefWidth="366.0" />
+                  <HBox alignment="CENTER_LEFT" layoutX="180.0" layoutY="212.0" prefHeight="18.0" prefWidth="348.0" spacing="10" />
+                  <ChoiceBox fx:id="ProduitCategory" layoutX="178.0" layoutY="221.0" prefHeight="26.0" prefWidth="348.0" style="-fx-background-color: F7F8FD;" />
+                  <Label fx:id="categorieErrorLabel" layoutX="180.0" layoutY="247.0" prefHeight="18.0" prefWidth="240.0" />
+                  <Button fx:id="imageProduct" layoutX="180.0" layoutY="601.0" mnemonicParsing="false" onAction="#handleAddImage" style="-fx-background-color: #F7F8FD;" text="Ajouter photo" />
+                  <Label fx:id="photoSelectedName" layoutX="168.0" layoutY="569.0" prefHeight="35.0" prefWidth="129.0" />
+                  <Button fx:id="backToListButton" layoutX="84.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackToList" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: #F7F8FD;" text="Retour" />
+                  <Label layoutX="178.0" layoutY="396.0" prefHeight="22.0" prefWidth="94.0" text="Quantité" textFill="#3a4374">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="errorLocationLabel" layoutX="173.0" layoutY="536.0" prefHeight="18.0" prefWidth="348.0" />
+                  <Label fx:id="titleErrorLabel" layoutX="179.0" layoutY="180.0" prefHeight="18.0" prefWidth="366.0" textFill="RED" />
+                  <TextField fx:id="quantityfield" layoutX="175.0" layoutY="427.0" prefHeight="26.0" prefWidth="366.0" />
+                  <Label layoutX="178.0" layoutY="466.0" prefHeight="22.0" prefWidth="94.0" text="Prix" textFill="#3a4374">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pricefield" layoutX="175.0" layoutY="488.0" prefHeight="26.0" prefWidth="366.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

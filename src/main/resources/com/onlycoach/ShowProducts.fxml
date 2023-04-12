@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="756.0" prefWidth="1251.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.onlycoach.ShowProductsController">
+   <children>
+      <AnchorPane prefHeight="76.0" prefWidth="1251.0">
+         <children>
+            <Pane layoutX="-6.0" prefHeight="66.0" prefWidth="1251.0" styleClass="navbar" stylesheets="@../../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="96.0" fitWidth="112.0" layoutX="14.0" layoutY="-4.0">
+                     <image>
+                        <Image url="@../../assets/only.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="searchQuery" layoutX="435.0" layoutY="26.0" onAction="#handleSearchItem" prefHeight="35.0" prefWidth="187.0" promptText="chercher un produit" style="-fx-background-color: ffffff; -fx-border-radius: 15; -fx-border-color: #658864; -fx-background-radius: 15;" />
+                  <Text fx:id="btnGoToCoaches" fill="WHITE" layoutX="148.0" layoutY="49.0" onMouseClicked="#handleGoToCoaches" strokeType="OUTSIDE" strokeWidth="0.0" text="Coaches" wrappingWidth="123.19999999999993">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+                  <Line endX="-100.00001525878906" endY="37.59999084472656" layoutX="334.0" layoutY="18.0" startX="-100.0" startY="11.999998092651367" stroke="WHITE" />
+                  <Text fx:id="btnGoToCourses" fill="WHITE" layoutX="246.0" layoutY="49.0" onMouseClicked="#goToCourses" strokeType="OUTSIDE" strokeWidth="0.0" text="Courses" wrappingWidth="87.5152587890625">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+                  <Text fx:id="btnGoToProducts" fill="WHITE" layoutX="334.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Products" wrappingWidth="87.5152587890625">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+                  <Line endX="-100.00001525878906" endY="37.59999084472656" layoutX="424.0" layoutY="19.0" startX="-100.0" startY="11.999998092651367" stroke="WHITE" />
+                  <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="1043.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/shopping-cart-svg-png-icon-download-28.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imageUser1" fitHeight="26.0" fitWidth="35.0" layoutX="1083.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/userlogo.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="myAccountButton1" layoutX="1120.0" layoutY="24.0" mnemonicParsing="false" onAction="#routeToAccountInformationUser" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: f27338; -fx-text-fill: white;" text="Mon Compte">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Ajoutbtn" layoutX="864.0" layoutY="24.0" mnemonicParsing="false" onAction="#AjouterProduit" prefHeight="32.0" prefWidth="123.0" style="-fx-background-color: f27338; -fx-text-fill: white;" text="Ajouter Produit">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Ajoutbtn1" layoutX="722.0" layoutY="22.0" mnemonicParsing="false" onAction="#AjouterCategorie" prefHeight="32.0" prefWidth="123.0" style="-fx-background-color: f27338; -fx-text-fill: white;" text="Ajouter Categorie">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <ChoiceBox fx:id="filterQuery" layoutX="158.0" layoutY="76.0" onInputMethodTextChanged="#refreshList" prefHeight="24.0" prefWidth="123.0" style="-fx-background-color: F7F8FD;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ChoiceBox>
+      <Text layoutX="39.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtrer par catégorie" />
+      <ScrollPane fx:id="scrollPane1" layoutX="11.0" layoutY="128.0" prefHeight="602.0" prefWidth="1234.0" style="-fx-background-color: ffffff; -fx-border-color: ffffff;" stylesheets="@../../css/style.css">
+         <content>
+            <GridPane fx:id="productGrid" prefHeight="26.0" prefWidth="0.0">
+               <rowConstraints>
+                  <RowConstraints maxHeight="461.599951171875" minHeight="10.0" prefHeight="184.00000915527343" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </content>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ScrollPane>
+   </children>
+</AnchorPane>
