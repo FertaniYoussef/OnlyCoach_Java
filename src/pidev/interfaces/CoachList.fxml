@@ -59,7 +59,15 @@
                                           <Blend />
                                        </effect>
                                     </TextField>
-                                    <Button fx:id="btnsuppCoach" focusTraversable="false" layoutX="79.0" layoutY="388.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="146.0" style="-fx-background-color: #FA2C56; -fx-background-radius: 8;" text="Delete" textFill="#fcf8f8">
+                                    <Button fx:id="btnsuppCoach" focusTraversable="false" layoutX="83.0" layoutY="346.0" mnemonicParsing="false" onAction="#suppCoach" prefHeight="61.0" prefWidth="146.0" style="-fx-background-color: #FA2C56; -fx-background-radius: 8;" text="Delete" textFill="#fcf8f8">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button fx:id="btnaddCoach" focusTraversable="false" layoutX="83.0" layoutY="427.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="146.0" style="-fx-background-color: #FA2C56; -fx-background-radius: 8;" text="Add" textFill="#fcf8f8">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>

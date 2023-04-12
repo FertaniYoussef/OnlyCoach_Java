@@ -6,10 +6,14 @@ package pidev.interfaceController;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLDataException;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -82,5 +86,30 @@ public class CoachList implements Initializable {
         picture.setCellValueFactory(new PropertyValueFactory<>("picture"));
         description.setCellValueFactory(new PropertyValueFactory<>("description"));
         rating.setCellValueFactory(new PropertyValueFactory<>("rating"));
+        
+    }
+    
+    public void resetTableData() throws SQLDataException, SQLException {
+        CoachController Lu = new CoachController();
+         List<Coach> listc = new ArrayList<>();
+        listc = Lu.getAllCoachs();
+        ObservableList<Coach> data = FXCollections.observableArrayList(listc);
+        tableCoach.setItems(data);
+    }
+    
+    @FXML
+    private void suppCoach(ActionEvent event) throws SQLException {
+         if (event.getSource() == btnsuppCoach) {
+            User rec = new User();
+
+        CoachController Lu = new CoachController();
+            rec.setId(tableCoach.getSelectionModel().getSelectedItem().getId());
+            System.out.print(rec.getId());
+            Lu.SupprimerCoach(rec.getId());
+            System.out.println(rec.getId());
+            resetTableData();
+ 
+        }
+ 
     }
 }
