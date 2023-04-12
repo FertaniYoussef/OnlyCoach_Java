@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CoursController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="148.0" layoutX="72.0" stroke="#cdcdcd" strokeType="INSIDE" width="1213.0" />
+      <HBox layoutX="107.0" layoutY="2.0" prefHeight="143.0" prefWidth="1144.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="143.0" prefWidth="916.0" spacing="30.0">
+               <children>
+                  <Circle fx:id="coachPicture" fill="#b5b5b5" radius="34.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                  <VBox alignment="CENTER_LEFT" prefHeight="143.0" prefWidth="848.0">
+                     <children>
+                        <Label fx:id="coachName" text="Amrou Ghribi">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label text="Verified Coach">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" layoutY="-2.0" prefHeight="809.0" prefWidth="73.0" spacing="300.0" style="-fx-background-color: rgb(14, 116, 144);">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="33.0">
+               <image>
+                  <Image url="@../../../../../../../../../Downloads/onlycoachlogo-2-2.png" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="200.0" prefWidth="163.0" spacing="30.0">
+               <children>
+                  <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#homePage" prefHeight="26.0" prefWidth="221.0" style="-fx-background-color: BLACK;" text="H" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#coursesPage" prefHeight="26.0" prefWidth="224.0" style="-fx-background-color: black;" text="C" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="113.0" layoutY="185.0" prefHeight="560.0" prefWidth="1130.0" spacing="20.0">
+         <children>
+            <Label text="Course details">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Line endX="1028.2928466796875" endY="-7.871213912963867" startX="-100.0" stroke="#c3c3c3">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Line>
+            <VBox prefHeight="763.0" prefWidth="1387.0" spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="1387.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="197.0" text="Course title">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="courseTitle" prefHeight="26.0" prefWidth="275.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="115.0" prefWidth="1387.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="197.0" text="Course description">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="courseDescription" prefHeight="134.0" prefWidth="404.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="1387.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="197.0" text="Course image">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#fileUpload" prefHeight="26.0" prefWidth="236.0" style="-fx-background-color: black;" text="Select file" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label fx:id="uploadedFile">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="1387.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="196.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="73.0" text="Sections">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nbsections" text="(0)" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="addNewSection" mnemonicParsing="false" onAction="#addNewSection" prefHeight="26.0" prefWidth="237.0" style="-fx-background-color: #0d9488;" text="Add section" textFill="WHITE" />
+                     </children>
+                  </HBox>
+                  <ScrollPane fx:id="scrollPaneContainer" prefHeight="276.0" prefWidth="1387.0">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="1385.0">
+                           <children>
+                              <VBox fx:id="sections">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </content>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </ScrollPane>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#submitForm" prefHeight="26.0" prefWidth="708.0" style="-fx-background-color: #0d9488;" text="Submit" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding></Button>
+                        <Button mnemonicParsing="false" onAction="#cancelForm" prefHeight="26.0" prefWidth="715.0" style="-fx-background-color: #dc3545;" text="Cancel" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding></Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

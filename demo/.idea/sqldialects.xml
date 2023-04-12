@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/Abonnement.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/Adherents.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/Categorie.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/Coach.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/Cours.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/DoctrineMigrationVersions.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/Feedback.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/MessengerMessages.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/Offre.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/Rating.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/Reponse.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/Ressources.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/Sections.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/User.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/abonnement.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/adherents.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/categorie.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/coach.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/cours.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/doctrine_migration_versions.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/feedback.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/messenger_messages.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/offre.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/rating.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/reponse.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/ressources.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/sections.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/user.sql" dialect="MySQL" />
+  </component>
+</project>

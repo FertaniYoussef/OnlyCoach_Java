@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="ad6ba7df-c869-4a42-938d-349b7d69e5df" name="onlycoach@localhost Mapping">
+      <data-sources db="20b08afa-7db6-4336-8cf6-bf17b1f83082" ddl="8373fe5c-7fbf-424f-913a-8a0d1aed286c" />
+      <scope>
+        <node kind="schema" qname="onlycoach" />
+      </scope>
+    </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="8373fe5c-7fbf-424f-913a-8a0d1aed286c" />
+          <option name="name" value="onlycoach@localhost (DDL)" />
+          <option name="languageId" value="MySQL" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/Abonnement.java" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/Adherents.java" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/Categorie.java" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/Coach.java" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/Cours.java" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/DoctrineMigrationVersions.java" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/Feedback.java" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/MessengerMessages.java" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/Offre.java" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/Rating.java" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/Reponse.java" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/Ressources.java" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/Sections.java" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/User.java" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/abonnement.sql" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/adherents.sql" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/categorie.sql" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/coach.sql" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/cours.sql" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/doctrine_migration_versions.sql" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/feedback.sql" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/messenger_messages.sql" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/offre.sql" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/rating.sql" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/reponse.sql" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/ressources.sql" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/sections.sql" />
+              <option value="file://$PROJECT_DIR$/src/main/java/Models/onlycoach/user.sql" />
+            </array>
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>
