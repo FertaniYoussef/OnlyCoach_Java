@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="756.0" prefWidth="1251.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.onlycoach.PanierController" fx:id="PanierController">
+   <children>
+      <Pane prefHeight="66.0" prefWidth="1251.0" styleClass="navbar" stylesheets="@../../css/style.css">
+         <children>
+            <ImageView fitHeight="96.0" fitWidth="112.0" layoutX="14.0" layoutY="-4.0">
+               <image>
+                  <Image url="@../../assets/only.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="btnGoToCoaches" fill="WHITE" layoutX="148.0" layoutY="49.0" onMouseClicked="#handleGoToCoaches" strokeType="OUTSIDE" strokeWidth="0.0" text="Coaches" wrappingWidth="123.19999999999993">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Line endX="-100.00001525878906" endY="37.59999084472656" layoutX="334.0" layoutY="18.0" startX="-100.0" startY="11.999998092651367" stroke="WHITE" />
+            <Text fx:id="btnGoToCourses" fill="WHITE" layoutX="246.0" layoutY="49.0" onMouseClicked="#goToCourses" strokeType="OUTSIDE" strokeWidth="0.0" text="Courses" wrappingWidth="87.5152587890625">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Text fx:id="btnGoToProducts" fill="WHITE" layoutX="334.0" layoutY="49.0" onMouseClicked="#goToProducts" strokeType="OUTSIDE" strokeWidth="0.0" text="Products" wrappingWidth="87.5152587890625">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Line endX="-100.00001525878906" endY="37.59999084472656" layoutX="424.0" layoutY="19.0" startX="-100.0" startY="11.999998092651367" stroke="WHITE" />
+            <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="1043.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/shopping-cart-svg-png-icon-download-28.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageUser1" fitHeight="26.0" fitWidth="35.0" layoutX="1083.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/userlogo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="myAccountButton1" layoutX="1120.0" layoutY="24.0" mnemonicParsing="false" onAction="#routeToAccountInformationUser" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: f27338; -fx-text-fill: white;" text="Mon Compte">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <ScrollPane fx:id="scrollPane1" layoutX="21.0" layoutY="138.0" prefHeight="602.0" prefWidth="759.0" style="-fx-background-color: ffffff; -fx-border-color: ffffff;" stylesheets="@../../css/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <content>
+            <GridPane fx:id="productGrid" prefHeight="26.0" prefWidth="0.0">
+               <rowConstraints>
+                  <RowConstraints maxHeight="461.599951171875" minHeight="10.0" prefHeight="184.00000915527343" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <VBox layoutX="798.0" layoutY="175.0" prefWidth="386.0" style="-fx-background-color: F7F8FD;">
+         <children>
+            <VBox fx:id="vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="386.0" style="-fx-background-color: F7F8FD;">
+               <children>
+                  <AnchorPane prefHeight="596.0" prefWidth="408.0" style="-fx-background-color: F7F8FD;">
+                     <children>
+                        <Label fx:id="labelTitre1" layoutX="29.0" layoutY="270.0" prefHeight="22.0" prefWidth="338.0" text="Total">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelMail" layoutX="223.0" layoutY="262.0" prefHeight="39.0" prefWidth="159.0" text="onlycoach@onlycoach.com" />
+                        <Label fx:id="labelCategorie" layoutX="69.0" layoutY="272.0" prefHeight="18.0" prefWidth="64.0" text="price">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="modifyItem1" layoutX="172.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleModifyItem" prefHeight="30.0" prefWidth="102.0" style="-fx-background-color: #B7B78A; -fx-text-fill: white;" text="Modifier l'offre" visible="false" />
+                        <Button fx:id="deletItemButton1" layoutX="265.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleDeleteItem" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: #D9534F; -fx-text-fill: white;" text="Supprimer l'offre" visible="false" />
+                        <Line endX="270.0000305175781" layoutX="113.0" layoutY="264.0" startX="-100.0" stroke="#658864" strokeWidth="0.8" />
+                        <Button fx:id="consulterItembtn" layoutX="118.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleShowItem" prefHeight="22.0" prefWidth="159.0" style="-fx-background-color: B7B78A; -fx-text-fill: white;" text="Passer au paiement" />
+                        <ImageView fitHeight="222.0" fitWidth="259.0" layoutX="75.0" layoutY="23.0">
+                           <image>
+                              <Image url="@../../assets/only2.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="labelTitre11" layoutX="29.0" layoutY="292.0" prefHeight="22.0" prefWidth="338.0" text="Tax">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelCategorie1" layoutX="69.0" layoutY="294.0" prefHeight="18.0" prefWidth="64.0" text="price">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="21.0" fitWidth="18.0" layoutX="196.0" layoutY="272.0">
+                           <image>
+                              <Image url="@../../assets/347722.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="17.0" fitWidth="18.0" layoutX="196.0" layoutY="295.0">
+                           <image>
+                              <Image url="@../../assets/Telephone-PNG-Picture.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="labelMail1" layoutX="233.0" layoutY="284.0" prefHeight="39.0" prefWidth="159.0" text="+216 99 403 823" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <effect>
+                  <DropShadow height="7.0" radius="3.0" width="7.0" />
+               </effect>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

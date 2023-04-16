@@ -69,6 +69,10 @@ public class ShowProductsController implements Initializable {
     private List<Produits> listeProduits;
     @FXML
     private Button Ajoutbtn1;
+
+    @FXML
+    private ImageView BtnPanier;
+
     @FXML
     private Button Ajoutbtn;
     @FXML
@@ -86,7 +90,17 @@ public class ShowProductsController implements Initializable {
     public ShowProductsController() {
 
     }
+    @FXML
+    void handleGoToPanier(MouseEvent event) throws IOException {
 
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Panier.fxml"));
+
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 
     @FXML
     void AjouterCategorie(ActionEvent event) throws IOException {
@@ -207,9 +221,8 @@ private void updateGrid(List<Produits> filteredProduits) throws SQLException, IO
             scrollPane1.setVisible(true);
             productGrid.setVisible(true);
             noResultsLabel.setVisible(false);
-            serviceProduit= new ProduitService();
-            listeProduits = serviceProduit.getAllProduits();
-            for (Produits produit : listeProduits) {
+
+            for (Produits produit : filteredProduits) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("Product.fxml"));
                 VBox vBox = fxmlLoader.load();

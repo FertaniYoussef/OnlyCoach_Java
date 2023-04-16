@@ -10,7 +10,8 @@ public interface IPanierService<T> {
 
     public void supprimerProduit(T t) throws SQLException;
     public void viderPanier(T t) throws SQLException;
-    public List<T> getPanier(int t) throws SQLException;
+    public List<T> getPanier() throws SQLException;
+    public List<T> getPanierByUser(int id) throws SQLException;
     public void passerCommande(T t) throws SQLException;
 
 

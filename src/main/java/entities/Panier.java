@@ -6,15 +6,18 @@ public class Panier {
     private Produits produit;
     private int quantite;
     private User user;
+    private boolean bought;
 
     public Panier( User user, Produits produit, int quantite) {
         this.user = user;
         this.produit = produit;
         this.quantite = quantite;
+        this.bought= false;
     }
     public Panier(Produits produit , int quantite) {
         this.produit = produit;
         this.quantite = quantite;
+        this.bought= false;
     }
 
 
@@ -48,5 +51,13 @@ public class Panier {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public boolean isBought() {
+        return bought;
+    }
+
+    public void setBought(boolean bought) {
+        this.bought = bought;
     }
 }

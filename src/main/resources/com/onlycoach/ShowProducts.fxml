@@ -53,7 +53,7 @@
                      </cursor>
                   </Text>
                   <Line endX="-100.00001525878906" endY="37.59999084472656" layoutX="424.0" layoutY="19.0" startX="-100.0" startY="11.999998092651367" stroke="WHITE" />
-                  <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="1043.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="BtnPanier" fitHeight="24.0" fitWidth="26.0" layoutX="1043.0" layoutY="31.0" onMouseClicked="#handleGoToPanier" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../assets/shopping-cart-svg-png-icon-download-28.png" />
                      </image>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="101.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.onlycoach.ProductPanierController">
+   <children>
+      <AnchorPane prefHeight="78.0" prefWidth="600.0">
+         <children>
+            <ImageView fx:id="imageContainer" fitHeight="86.0" fitWidth="100.0" layoutX="30.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+            <Separator layoutX="160.0" layoutY="15.0" orientation="VERTICAL" prefHeight="72.0" prefWidth="0.0" />
+            <Label fx:id="NomProduit" layoutX="177.0" layoutY="35.0" prefHeight="17.0" prefWidth="35.0" text="Titre" />
+            <Label layoutX="367.0" layoutY="35.0" prefHeight="17.0" prefWidth="53.0" text="Quantite" />
+            <ImageView fx:id="deleteButton" fitHeight="25.0" fitWidth="25.0" layoutX="552.0" layoutY="31.0" onMouseClicked="#deletePanier">
+               <image>
+                  <Image url="@../../assets/vecteezy_minus-sign-icon_9267401_446.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="quantityfield" layoutX="420.0" layoutY="31.0" onAction="#handleQuantity" prefHeight="25.0" prefWidth="47.0" />
+            <Label fx:id="PrixLabel" layoutX="483.0" layoutY="35.0" text="Price" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
